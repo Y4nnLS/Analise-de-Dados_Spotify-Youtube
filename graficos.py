@@ -104,6 +104,6 @@ def relacao_likes_views(bandas):
         >>> teste(dados_bandas)
     """
     for banda, dados in bandas:
-        sns.lmplot(x='Likes', y='Views', data=dados, fit_reg=True, hue='Artist')
+        sns.lmplot(x='Likes', y='Views', data=dados, fit_reg=True, hue='Artista')
         plt.title(f"Relação entre Likes e Views para {banda}")
         plt.show()
