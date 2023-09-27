@@ -67,7 +67,7 @@ while True:
                     case 4:
                         graficos.print_valencia(bandas)
                     case 5:
-                        graficos.teste(bandas)
+                        graficos.relacao_likes_views(bandas)
                     case 6:
                         break    
                          
