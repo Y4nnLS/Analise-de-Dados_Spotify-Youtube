@@ -92,6 +92,8 @@ def print_valencia(bandas):
 def relacao_likes_views(bandas):
     """
     Gera gráficos de dispersão mostrando a relação entre 'Likes' e 'Views' para cada banda.
+    Cada gráfico possui uma linha de regressão linear e a variável "Artist" é utilizada como 
+    matiz (hue) para diferenciar os dados de diferentes artistas/bandas.
 
     Parâmetros:
         bandas (list): Uma lista contendo tuplas onde cada tupla contém o nome da banda
