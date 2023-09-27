@@ -26,6 +26,9 @@ def listar_bandas(df):
 
     Parâmetros:
         df (pd.DataFrame): O DataFrame contendo os dados das bandas.
+    
+    Retorna:
+        list: Uma lista de strings contendo os nomes das bandas.
     """
     bandas = df['Artist'].unique().tolist()
     
@@ -102,8 +105,8 @@ while True:
             letra = input("Digite a letra para filtrar as bandas: ").upper()
             bandas_filtradas = filtrar_por_letra(df, letra)
             if not bandas_filtradas.empty:
-                bandas_disponiveis = listar_bandas(bandas_filtradas)
-                print(bandas_disponiveis)
+                listar_bandas(bandas_filtradas)
+                
             else:
                 print(f"Nenhuma banda encontrada com a letra '{letra}'.")
         case 5:
