@@ -63,14 +63,14 @@ Requerimentos:
 
 ## Comandos
 
-```bash
-# instala todas as dependências listadas em arquivo .txt
+<p> instala todas as dependências listadas em requirements.txt :</p>
+
     pip install -r requirements.txt    
-```
-```bash
-# lista os modulos disponíveis      
+
+<p> lista os modulos disponíveis : </p> 
+
     pip list 
-```
+
 
 ## 📁 Acesso ao DataSet
 
