@@ -9,6 +9,16 @@ def print_menu():
     print("| [4] Sair                        |")
     print("+---------------------------------+")
 
+def print_menu_graficos():
+    print("+-------------- MENU --------------+")
+    print("| [1] Gráfico de Likes             |")
+    print("| [2] Gráfico de Views             |")
+    print("| [3] Gráfico de Instrumentalidade |")
+    print("| [4] Gráfico de Valência          |")
+    print("| [5] Relação entre Likes e Views  |")
+    print("| [6] Sair                         |")
+    print("+----------------------------------+")
+
 
 caminho = "Spotify_Youtube.csv"
 
@@ -41,11 +51,26 @@ while True:
                 print(f"Comparando dados para {banda}: ")
                 print(df_res)
         case 3:
-            graficos.print_likes(bandas)
-            graficos.print_views(bandas)
-            graficos.print_instrumentalidade(bandas)
-            graficos.print_valencia(bandas)
-            graficos.teste(bandas)
+            while True:
+                print_menu_graficos()
+                try:
+                    tipo_grafico = int(input("Selecione uma das opções acima: "))
+                except ValueError:
+                    continue
+                match tipo_grafico:
+                    case 1:
+                        graficos.print_likes(bandas)
+                    case 2:
+                        graficos.print_views(bandas)
+                    case 3:
+                        graficos.print_instrumentalidade(bandas)
+                    case 4:
+                        graficos.print_valencia(bandas)
+                    case 5:
+                        graficos.teste(bandas)
+                    case 6:
+                        break    
+                         
         case 4:
             break
         case _:
